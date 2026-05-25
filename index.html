@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultBR - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Container Principal */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 2rem 4rem;
+        }
+
+        /* Cabeçalho / Logo */
+        header {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        .logo-cultbr {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-cultbr span {
+            color: #ffcc00;
+            margin-left: 2px;
+        }
+
+        /* Área Central (Texto e Gráfico) */
+        main {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "Poppins, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+        }
+
+        /* Painel Esquerdo - Login */
+        .left-panel {
+            max-width: 400px;
+        }
+
+        .left-panel h1 {
+            font-family: Poppins, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .left-panel p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        /* Botão Gov.br */
+        .btn-gov {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1351b4; /* Azul Gov.br */
+            color: #ffffff;
+            border: none;
+            border-radius: 13px;
+            padding: 0.8rem 1.5rem;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn-gov:hover {
+            background-color: #0c3e8e;
+        }
+
+        .btn-gov strong {
+            margin-left: 5px;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* Texto de Dúvidas */
+        .help-text {
+            font-size: 0.9rem !important;
+            font-weight: 500;
+        }
+
+        .help-text a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Painel Direito - Gráfico Abstrato */
+        .right-panel {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 5rem;
+        }
+
+        .abstract-graphic {
+            width: 400px;
+            height: auto;
+        }
+
+        /* Rodapé - Logos e Chat */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .footer-logos {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logos img {
+            height: 60px; /* Altura padrão para os logos */
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        /* Ícone de Chat Flutuante */
+        .chat-btn {
+            background-color: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            main {
+                flex-direction: column;
+                justify-content: center;
+            }
+            .right-panel {
+                padding-right: 0;
+                margin-top: 4rem;
+                justify-content: center;
+            }
+            .footer-logos {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-cultbr">
+                <a href="#">
+                    <img src="cultbr.svg">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="left-panel">
+                <h1>Boas-vindas!</h1>
+                <p>Para acessar a plataforma, faça login com sua conta gov.br.</p>
+                
+                <button class="btn-gov">
+                    Acessar com <strong>gov.br</strong>
+                </button>
+                
+                <p class="help-text">
+                    Possui dúvidas? Acesse <a href="#">Perguntas frequentes</a>
+                </p>
+            </div>
+
+            <div class="right-panel" viewBox="0 0 400 400">
+                <img src="logo_login.svg" alt="Arte ilustrada CultBR" class="abstract-graphic">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-logos">
+                <a href="#">
+                    <img src="snc.png" alt="Logo SNC" width="110%" height="auto"></a>
+                <a href="#">
+                    <img src="aldirblanc.png" alt="Logo Lei Aldir Blanc"></a>
+                <a href="#">
+                    <img src="minc.png" alt="Logo Ministério da Cultura"></a>
+                <a href="#">
+                    <img src="gov.png" alt="Logo Governo do Brasil"></a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="chat-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>
